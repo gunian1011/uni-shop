@@ -72,7 +72,7 @@
 			},
 			bgColor: {
 				type: String,
-				default: "#F8F8F8"
+				default: "#FFFFFF"
 			},
 			maxlength: {
 				type: [Number, String],
@@ -81,8 +81,8 @@
 		},
 		data() {
 			return {
-				show: false,
-				showSync: false,
+				show: true,
+				showSync: true,
 				searchVal: ""
 			}
 		},
@@ -144,7 +144,7 @@
 		flex-direction: row;
 		position: relative;
 		padding: 16rpx;
-		background-color: #ffffff;
+		background-color: #f8f8f8;
 	}
 
 	.uni-searchbar__box {
