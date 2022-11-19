@@ -8,7 +8,9 @@
     "app-plus" : {
         "nvueCompiler" : "uni-app",
         "compilerVersion" : 3,
-        "modules" : {},
+        "modules" : {
+            "OAuth" : {}
+        },
         "distribute" : {
             "android" : {
                 "permissions" : [
@@ -37,7 +39,15 @@
                 ]
             },
             "ios" : {},
-            "sdkConfigs" : {}
+            "sdkConfigs" : {
+                "oauth" : {
+                    "univerify" : {},
+                    "weixin" : {
+                        "appid" : "wx1a3c819e7aa93710",
+                        "UniversalLinks" : ""
+                    }
+                }
+            }
         }
     },
     "quickapp" : {},
@@ -45,7 +55,14 @@
         "appid" : "wx1a3c819e7aa93710",
         "setting" : {
             "urlCheck" : true,
-            "checkSiteMap" : false
+            "checkSiteMap" : false,
+            "es6" : true,
+            "postcss" : true
+        },
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "添加收货地址"
+            }
         }
     }
 }
