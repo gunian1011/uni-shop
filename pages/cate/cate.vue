@@ -9,6 +9,7 @@
           <view :class="['left-scroll-view-item', i === active ? 'active' : '']" @click="activeChanged(i)">{{item.cat_name}}</view>
         </block>
       </scroll-view>
+      
       <!-- 右侧的滚动视图区域 -->
       <scroll-view class="right-scroll-view" :scroll-top="scrollTop" scroll-y :style="{height: wh + 'px'}">
         <view class="cate-lv2" v-for="(item2, i2) in cateLevel2" :key="i2">
@@ -31,7 +32,10 @@
 </template>
 
 <script>
-	export default {
+  // 导入自己封装的 mixin 模块
+  import badgeMix from '@/mixins/tabbar-badge.js'
+  export default {
+    mixins: [badgeMix],
 		data() {
 			return {
         // 当前设备可用的高度

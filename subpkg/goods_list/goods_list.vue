@@ -2,21 +2,7 @@
   <view>
     <view class="goods-list">
       <view v-for="(goods, i) in goodsList" :key="i" @click="gotoDetail(goods)">
-        <view class="goods-item">
-          <!-- 商品左侧图片区域 -->
-          <view class="goods-item-left">
-            <image :src="goods.goods_small_logo || defaultPic" class="goods-pic"></image>
-          </view>
-          <!-- 商品右侧信息区域 -->
-          <view class="goods-item-right">
-            <!-- 商品标题 -->
-            <view class="goods-name">{{goods.goods_name}}</view>
-            <view class="goods-info-box">
-              <!-- 商品价格 -->
-              <view class="goods-price">￥{{goods.goods_price | tofixed}}</view>
-            </view>
-          </view>
-        </view>
+        <my-goods :goods="goods"></my-goods>
       </view>
     </view>
   </view>
